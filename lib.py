@@ -1,6 +1,3 @@
-from typing import Type
-
-
 def leiaInt(msg):
     while True:
         try:
@@ -29,8 +26,8 @@ def menu(lista):
     cabeçalho('MENU PRINCIPAL')
     c = 1
     for item in lista:
-        print(f'{c} - {item}')
+        print(f'\033[33m{c}\033[m - \033[34m{item}\033[m')
         c += 1
     print(linha())
-    opc = leiaInt('Sua opção: ')
-
+    opc = leiaInt('\033[32mSua opção: \033[m')
+    return opc
